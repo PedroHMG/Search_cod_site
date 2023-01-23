@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="static/css/main.css">
+    <title>Document</title>
+
+</head>
+<h1 class="title">Pequise pelo código de serviço</h1>
+
+<body>
+    <form method="POST">
+        <div class="search-section">
+            <div class="search-name">
+                <input type="text" class="search-box" name="search_name" placeholder="Procurar por Nome">
+                <button class="search-button">
+                    <img class="search-icon" src="static\icons\search.svg">
+                </button>
+            </div>
+            <div class="search-cnpj">
+                <input type="text" class="search-box" name="search_cnpj" placeholder="Procurar por CNPJ">
+                <button class="search-button">
+                    <img class="search-icon" src="static\icons\search.svg">
+                </button>
+            </div>
+        </div>
+    </form>
+    <div>
+        <table>
+            <tr>
+                {% for col in column_names %}
+                <th>{{col}}</th>
+                {% endfor %}
+            </tr>
+            {% for row in row_data %}
+            <tr>
+                {% for col, row_ in zip(column_names, row) %}
+                {% if col == link_column %}
+                <td>
+                    <button type="submit" value={{ row_ }} name="row_id" form="row_form" class="row_button">
+                        {{ row_ }}
+                    </button>
+                </td>
+                {% else %}
+                <td>{{row_}}</td>
+                {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        
+        </table>
+    </div>
+</body>
+
+</html>

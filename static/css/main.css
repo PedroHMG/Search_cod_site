@@ -1,0 +1,98 @@
+.title_box {
+    margin: 0;
+    font-family: sans-serif;
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+}
+
+.title {
+    margin:auto;
+    text-align: center;
+    font-family: sans-serif;
+}
+
+.search-section {
+    /*background-color: aqua;*/
+    justify-content: space-between;
+    display: inline;
+}
+
+.search-name, .search-cnpj {
+    display: block;
+    display: flex;
+    align-items: center
+    
+}
+
+.search-box {
+    /*flex: 1;*/
+    height: 36px;
+    width: 500px;
+    padding-left: 12px;
+    font-size: 18px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+    box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.search-box::placeholder {
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+.search-button {
+    height: 40px;
+    width: 66px;
+    background-color: rgb(223, 221, 221);
+    border-width: 1px;
+    border-style: solid;
+    border-color: gray;
+    border-radius: 5px;
+}
+
+
+.search-icon {
+    height: 25px;
+    margin-top: 4px;
+}
+
+
+.table {
+    font-family: arial, sans-serif;
+    font-size: 10px;
+    border-collapse: collapse;
+    
+}
+
+.table-of-data {
+    display: flex;
+    width: 700px;
+    font-size: 14px;
+    padding-right: 40px;
+    font-family: arial, sans-serif;
+}
+
+.data-section {
+    display: flex;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.row-button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
