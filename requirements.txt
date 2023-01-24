@@ -1,5 +1,0 @@
-pip install pandas
-pip install flask
-pip install flask-sqlalchemy
-pip install thefuzz
-pip install python-Levenshtein
